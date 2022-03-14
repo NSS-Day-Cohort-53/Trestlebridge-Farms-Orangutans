@@ -25,7 +25,7 @@ namespace Trestlebridge.Models.Animals
         // Methods
         public void Feed()
         {
-            Console.WriteLine($"Cow {this._shortId} just ate {this.FeedPerDay}kg of grass");
+            Console.WriteLine($"Duck {this._shortId} just ate {this.FeedPerDay}kg of feed");
         }
 
         public int Collect()
