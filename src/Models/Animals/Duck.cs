@@ -20,7 +20,7 @@ namespace Trestlebridge.Models.Animals
         }
 
         public double FeedPerDay { get; set; } = 0.8;
-        public string Type { get; } = "Cow";
+        public string Type { get; } = "Duck";
 
         // Methods
         public void Feed()
