@@ -14,16 +14,26 @@ namespace Trestlebridge.Actions {
             Console.WriteLine ("What are you buying today?");
 
             Console.Write ("> ");
-            string choice = Console.ReadLine ();
-
-            switch (Int32.Parse(choice))
-            {
-                case 1:
-                    ChooseGrazingField.CollectInput(farm, new Cow());
+            while (true) {
+                string choice = Console.ReadLine();
+                if  (int.TryParse(choice, out int i))
+                {
+                    switch (i)
+                    {
+                        case 1:
+                            ChooseGrazingField.CollectInput(farm, new Cow());
+                            break;
+                        default:
+                            break;
+                    }
                     break;
-                default:
-                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Invalid option selected");
+                }
             }
+
         }
     }
 }

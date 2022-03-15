@@ -20,8 +20,12 @@ namespace Trestlebridge.Models.Facilities {
 
         public void AddResource (IGrazing animal)
         {
-            // TODO: implement this...
-            throw new NotImplementedException();
+            if(_animals.Count < this.Capacity) {
+                _animals.Add(animal);
+                Console.WriteLine("Successfully added to the Grazing Field.");
+            } else {
+                Console.WriteLine("Field is full.");
+            }
         }
 
         public void AddResource (List<IGrazing> animals) 
